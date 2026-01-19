@@ -66,6 +66,7 @@ function goToDetail() {
   text-align: left;
   font-weight: 500;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
 
   display: -webkit-box;
   -webkit-line-clamp: 6;

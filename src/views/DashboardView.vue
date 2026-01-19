@@ -94,7 +94,9 @@ function dropToTodo(e: DragEvent) {
                 {{ note.title }}
               </div>
               <div class="note-content">
+                <p>
                 {{ note.content }}
+                </p>
               </div>
           </RouterLink>
         </div>
@@ -170,11 +172,18 @@ function dropToTodo(e: DragEvent) {
 }
 
 .note-content {
-  height: 5rem;
+  height: 4.5rem;
+  width: 100%;
   display: flex;
-  align-items: center
-}
+  align-items: center;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 h2 {
   margin-top: 0.5em;
