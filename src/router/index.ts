@@ -17,6 +17,6 @@ const routes = [
 ];
 
 export const router = createRouter({
-    history: createWebHistory("TaskBoard"),
+    history: createWebHistory("/TaskBoard/"),
     routes
 });
