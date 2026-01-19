@@ -111,7 +111,6 @@ function dropToTodo(e: DragEvent) {
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  //margin: auto;
 }
 
 .cards {
