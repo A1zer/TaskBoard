@@ -40,7 +40,7 @@ function dropToTodo(e: DragEvent) {
 </script>
 
 <template>
-  <div class="dashboard">
+  <section class="dashboard">
     <h1>Dashboard</h1>
 
     <div class="cards">
@@ -102,7 +102,7 @@ function dropToTodo(e: DragEvent) {
         </div>
       </div>
     </section>
-  </div>
+  </section>
 </template>
 
 <style scoped>

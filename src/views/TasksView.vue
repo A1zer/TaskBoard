@@ -30,22 +30,25 @@ function handleSubmit() {
 
 <template>
   <div class="tasks">
-    <h1>Tasks</h1>
 
     <!-- ADD TASK -->
     <section class="add-card">
+      <h1>Tasks</h1>
+      <div class="form-container">
       <form @submit.prevent="handleSubmit">
         <input name="name" v-model="title" placeholder="Task name" autocomplete="on"/>
         <textarea name="textArea" v-model="description" placeholder="Description (optional)"/>
         <p v-if="error" class="error">{{ error }}</p>
         <button type="submit">Add Task</button>
       </form>
+      </div>
     </section>
 
     <hr />
 
     <!-- LISTS -->
-    <section>
+    <section class="list">
+      <div class="list-container">
         <ul class="task-list">
           <li v-for="task in store.tasks" :key="task.id" class="list-item" :class="{ completed: task.completed }">
 
@@ -84,6 +87,7 @@ function handleSubmit() {
             </div>
           </li>
         </ul>
+      </div>
     </section>
   </div>
 </template>
@@ -96,18 +100,28 @@ function handleSubmit() {
   flex-direction: column;
 }
 
-.tasks > section {
-  margin: 0 auto;
+.add-card, .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .add-card {
-  width: 30vw;
+  gap: 2rem;
+}
+
+.form-container {
+  width: 600px;
   background: #2a2a2a;
   padding: 1rem;
   border-radius: 10px;
 }
 
-.add-card form {
+.list-container {
+  width: 600px;
+}
+
+form {
   display: grid;
   gap: 0.75rem;
 }
@@ -131,7 +145,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 40vw;
+  width: 600px;
   margin: auto;
 }
 

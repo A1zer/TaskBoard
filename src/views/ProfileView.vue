@@ -31,7 +31,7 @@ function resetData() {
 </script>
 
 <template>
-  <div class="profile">
+  <section class="profile">
     <h1>Profile</h1>
     <div>
     <p>TaskBoard</p>
@@ -63,7 +63,7 @@ function resetData() {
         Reset All
       </button>
     </section>
-  </div>
+  </section>
 </template>
 
 <style scoped>
