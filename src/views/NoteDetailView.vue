@@ -72,15 +72,9 @@ function handleDelete() {
   width: 100%;
 }
 
-.edit-wrapper {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  align-items: center;
-}
-
 .edit-card {
-  width: 600px;
+  max-width: 600px;
+  margin: auto;
   background: #2a2a2a;
   padding: 1rem;
   border-radius: 10px;

@@ -51,6 +51,9 @@ function dropToTodo(e: DragEvent) {
       >
         <h2>TODO</h2>
         <div class="tasks-grid">
+          <p v-if="todoTasks.length === 0">
+            🎉 Vše hotovo!
+          </p>
         <TaskCard
             v-for="task in todoTasks"
             :key="task.id"
@@ -58,9 +61,7 @@ function dropToTodo(e: DragEvent) {
         />
         </div>
 
-        <p v-if="todoTasks.length === 0">
-          🎉 Vše hotovo!
-        </p>
+
       </section>
 
       <!-- DONE -->
@@ -197,4 +198,16 @@ ul {
 li {
   padding: 0.25rem 0;
 }
+
+/*----@Media section----*/
+@media (max-width: 820px) {
+  .cards, .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tasks-grid {
+    min-height: 18rem;
+  }
+}
+
 </style>

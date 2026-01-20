@@ -51,7 +51,7 @@ function handleSubmit() {
       <ul class="note-list">
         <li v-for="note in store.notes" :key="note.id" class="list-item">
 
-          <div class="side">
+          <div id="side-filler" class="side">
 
           </div>
 
@@ -93,25 +93,17 @@ function handleSubmit() {
   flex-direction: column;
 }
 
-.add-card, .list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.add-card {
-  gap: 2rem;
-}
-
 .form-container {
-  width: 600px;
+  max-width: 600px;
+  margin: auto;
   background: #2a2a2a;
   padding: 1rem;
   border-radius: 10px;
 }
 
 .list-container {
-  width: 600px;
+  max-width: 600px;
+  margin: auto;
 }
 
 form {
@@ -138,8 +130,6 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 600px;
-  margin: auto;
 }
 
 .list-item {
@@ -183,5 +173,23 @@ button.delete {
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
+}
+
+@media (max-width: 430px) {
+  #side-filler {
+    display: none;
+    width: 0;
+  }
+
+  .side {
+    justify-content: end;
+  }
+
+  .item-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 1rem;
+
+  }
 }
 </style>

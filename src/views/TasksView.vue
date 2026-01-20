@@ -53,7 +53,7 @@ function handleSubmit() {
           <li v-for="task in store.tasks" :key="task.id" class="list-item" :class="{ completed: task.completed }">
 
             <!-- CHECKBOX -->
-            <div class="side">
+            <div id="checkbox-container" class="side">
             <input
                 name="checkbox"
                 type="checkbox"
@@ -101,25 +101,17 @@ function handleSubmit() {
   flex-direction: column;
 }
 
-.add-card, .list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.add-card {
-  gap: 2rem;
-}
-
 .form-container {
-  width: 600px;
+  max-width: 600px;
+  margin: auto;
   background: #2a2a2a;
   padding: 1rem;
   border-radius: 10px;
 }
 
 .list-container {
-  width: 600px;
+  max-width: 600px;
+  margin: auto;
 }
 
 form {
@@ -146,8 +138,6 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 600px;
-  margin: auto;
 }
 
 .list-item {
@@ -208,5 +198,21 @@ button.delete {
 
 .list-item.completed .content-title {
   text-decoration: line-through;
+}
+
+@media (max-width: 430px) {
+  #checkbox-container {
+    width: auto;
+  }
+
+  .item-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  .side input {
+    transform: scale(100%);
+    margin: 0 1rem;
+  }
 }
 </style>

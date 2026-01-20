@@ -26,4 +26,10 @@ import Navbar from "./components/Navbar.vue";
   display: flex;
   flex: 1;
 }
+
+@media (max-width: 430px) {
+  #page {
+    padding: 1rem;
+  }
+}
 </style>
