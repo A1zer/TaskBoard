@@ -18,10 +18,12 @@ import Navbar from "./components/Navbar.vue";
   height: 100vh;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 #page {
   padding: 2rem;
-  flex-grow: 1;
+  display: flex;
+  flex: 1;
 }
 </style>

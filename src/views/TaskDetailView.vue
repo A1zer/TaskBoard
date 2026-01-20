@@ -43,10 +43,11 @@ function handleDelete() {
 </script>
 
 <template>
-  <div v-if="task" class="task">
+  <section v-if="task" class="task">
+    <div class="edit-wrapper">
     <h1>Task Details</h1>
 
-    <section class="edit-card">
+    <div class="edit-card">
     <form @submit.prevent="handleSave">
 
         <strong>Name</strong>
@@ -69,8 +70,9 @@ function handleDelete() {
         Delete
       </button>
     </form>
-    </section>
-  </div>
+    </div>
+    </div>
+  </section>
 
   <p v-else>Task not found</p>
 </template>
@@ -78,17 +80,18 @@ function handleDelete() {
 <style scoped>
 .task {
   height: 100%;
+  width: 100%;
+}
+
+.edit-wrapper {
   display: flex;
   gap: 2rem;
   flex-direction: column;
-}
-
-.task > section {
-  margin: 0 auto;
+  align-items: center;
 }
 
 .edit-card {
-  width: 30vw;
+  width: 600px;
   background: #2a2a2a;
   padding: 1rem;
   border-radius: 10px;

@@ -87,6 +87,7 @@ function handleSubmit() {
 <style scoped>
 .notes {
   height: 100%;
+  width: 100%;
   display: flex;
   gap: 2rem;
   flex-direction: column;

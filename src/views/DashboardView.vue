@@ -107,10 +107,10 @@ function dropToTodo(e: DragEvent) {
 
 <style scoped>
 .dashboard {
-  height: 100%;
   display: flex;
-  gap: 2rem;
   flex-direction: column;
+  gap: 2rem;
+  flex: 1;
 }
 
 .cards {

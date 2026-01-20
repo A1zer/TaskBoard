@@ -68,8 +68,8 @@ function resetData() {
 
 <style scoped>
 .profile {
-  max-width: 800px;
-  margin: auto;
+  width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;

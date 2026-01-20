@@ -40,10 +40,11 @@ function handleDelete() {
 </script>
 
 <template>
-  <div v-if="note" class="note">
+  <section v-if="note" class="note">
+    <div class="edit-wrapper">
     <h1>Note Details</h1>
 
-    <section class="edit-card">
+    <div class="edit-card">
     <form @submit.prevent="handleSave">
 
         <Strong>Name</Strong>
@@ -58,8 +59,9 @@ function handleDelete() {
         Delete
       </button>
     </form>
-    </section>
-  </div>
+    </div>
+    </div>
+  </section>
 
   <p v-else>Note not found</p>
 </template>
@@ -67,17 +69,18 @@ function handleDelete() {
 <style scoped>
 .note {
   height: 100%;
+  width: 100%;
+}
+
+.edit-wrapper {
   display: flex;
   gap: 2rem;
   flex-direction: column;
-}
-
-.note > section {
-  margin: 0 auto;
+  align-items: center;
 }
 
 .edit-card {
-  width: 30vw;
+  width: 600px;
   background: #2a2a2a;
   padding: 1rem;
   border-radius: 10px;
