@@ -50,10 +50,12 @@ function dropToTodo(e: DragEvent) {
                @drop="dropToTodo"
       >
         <h2>TODO</h2>
-        <div class="tasks-grid">
-          <p v-if="todoTasks.length === 0">
-            🎉 Vše hotovo!
-          </p>
+        <div id="doneLbl-container" v-if="todoTasks.length === 0">
+          <strong >
+            Everything Done!
+          </strong>
+        </div>
+        <div class="tasks-grid" v-if="todoTasks.length > 0">
         <TaskCard
             v-for="task in todoTasks"
             :key="task.id"
@@ -133,6 +135,11 @@ function dropToTodo(e: DragEvent) {
 
 .card.notes {
   flex-grow: 1;
+}
+
+#doneLbl-container {
+  height: 18rem;
+  font-size: 1.1rem;
 }
 
 .tasks-grid {
